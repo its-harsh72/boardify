@@ -49,10 +49,14 @@ export const login = async (req: Request, res: Response) => {
 
     const token = generateToken(user._id.toString());
 
-    res
-      .cookie("token", token, { httpOnly: true })
-      .status(200)
-      .json({ message: "Login success", user });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      path: "/",
+    });
+
+    return res.status(200).json({ message: "Login success", user });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
