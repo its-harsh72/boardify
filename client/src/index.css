@@ -1,0 +1,8 @@
+body {
+  @apply bg-gray-100 font-sans;
+}
+
+* {
+  @apply transition-colors;
+}
+@import "tailwindcss";
