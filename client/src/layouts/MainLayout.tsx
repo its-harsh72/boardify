@@ -8,7 +8,7 @@ export default function MainLayout({ children }: any) {
 
       <div className="flex flex-col flex-1">
         <Navbar />
-        <div className="p-6 overflow-auto">{children}</div>
+        <div className="p-6 overflow-hidden">{children}</div>
       </div>
     </div>
   );
