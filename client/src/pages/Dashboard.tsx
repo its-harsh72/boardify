@@ -113,7 +113,7 @@ export default function Dashboard() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredBoards.map((board, index) => (
+              {filteredBoards.map((board) => (
                 <div
                   key={board._id}
                   className="transform transition-transform duration-200 hover:scale-105"
